@@ -1,43 +1,52 @@
-# React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Cartify
 
-Currently, two official plugins are available:
+Cartify is a modern e-commerce shopping cart demo built with React, TypeScript, Vite, and Tailwind CSS. It showcases a clean UI, cart management, product listing, and sidebar interactions.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Features
 
-## Expanding the ESLint configuration
+- Product listing with mock data
+- Product details modal
+- Add/remove items from cart
+- Cart sidebar with item management
+- Responsive design using Tailwind CSS
+- Context API for global cart state
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## Tech Stack
 
-```js
-export default tseslint.config([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+- React
+- TypeScript
+- Vite
+- Tailwind CSS
+- ESLint
 
-      // Remove tseslint.configs.recommended and replace with this
-      ...tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      ...tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      ...tseslint.configs.stylisticTypeChecked,
+## Getting Started
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+1. Install dependencies:
+  ```sh
+  npm install
+  ```
+2. Start the development server:
+  ```sh
+  npm run dev
+  ```
+3. Build for production:
+  ```sh
+  npm run build
+  ```
+
+## Project Structure
+
+- `src/components` - UI and feature components
+- `src/context` - Cart context provider
+- `src/data` - Mock product data
+- `src/hooks` - Custom hooks
+- `src/types` - Type definitions
+- `src/utils` - Utility functions
+
+## License
+
+MIT
 
 You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
 
